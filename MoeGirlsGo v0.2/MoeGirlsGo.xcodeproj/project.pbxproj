@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		920C4C5C21A5553300E96133 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C4C5B21A5553300E96133 /* MapViewController.swift */; };
-		921ECBF021A54D1C005C3302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921ECBEF21A54D1C005C3302 /* AppDelegate.swift */; };
 		921ECBF221A54D1C005C3302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921ECBF121A54D1C005C3302 /* ViewController.swift */; };
 		921ECBF521A54D1C005C3302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921ECBF321A54D1C005C3302 /* Main.storyboard */; };
 		921ECBF721A54D26005C3302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921ECBF621A54D26005C3302 /* Assets.xcassets */; };
@@ -23,12 +22,17 @@
 		92393DE921A6300F0024A52C /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92393DE821A6300F0024A52C /* AMap.bundle */; };
 		92393DEE21A63E120024A52C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92393DED21A63E120024A52C /* GLKit.framework */; };
 		92393DF021A63E200024A52C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92393DEF21A63E1F0024A52C /* Security.framework */; };
+		923A4FA121A77DE600189A2E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A4FA021A77DE600189A2E /* CameraViewController.swift */; };
+		9243FCD321ABD6E50045115B /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9243FCD221ABD6E40045115B /* Scene.sks */; };
+		9243FCD521ABD8C50045115B /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243FCD421ABD8C50045115B /* Scene.swift */; };
+		9243FCD721ABD8F90045115B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243FCD621ABD8F80045115B /* AppDelegate.swift */; };
+		9266D34C21ACD0F4003EA3CF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9266D34B21ACD0F4003EA3CF /* UIImage.swift */; };
+		9288F22521ACEE0100806435 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9288F22421ACEE0100806435 /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		920C4C5B21A5553300E96133 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		921ECBEC21A54D1C005C3302 /* MoeGirlsGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoeGirlsGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		921ECBEF21A54D1C005C3302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		921ECBF121A54D1C005C3302 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		921ECBF421A54D1C005C3302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		921ECBF621A54D26005C3302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +49,12 @@
 		92393DEA21A631AC0024A52C /* MoeGirlsGo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoeGirlsGo-Bridging-Header.h"; sourceTree = "<group>"; };
 		92393DED21A63E120024A52C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		92393DEF21A63E1F0024A52C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		923A4FA021A77DE600189A2E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		9243FCD221ABD6E40045115B /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		9243FCD421ABD8C50045115B /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		9243FCD621ABD8F80045115B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9266D34B21ACD0F4003EA3CF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		9288F22421ACEE0100806435 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +98,18 @@
 			isa = PBXGroup;
 			children = (
 				92393DE821A6300F0024A52C /* AMap.bundle */,
-				921ECBEF21A54D1C005C3302 /* AppDelegate.swift */,
+				9243FCD621ABD8F80045115B /* AppDelegate.swift */,
+				9288F22421ACEE0100806435 /* Global.swift */,
+				9266D34B21ACD0F4003EA3CF /* UIImage.swift */,
+				9243FCD421ABD8C50045115B /* Scene.swift */,
+				9243FCD221ABD6E40045115B /* Scene.sks */,
 				921ECBF121A54D1C005C3302 /* ViewController.swift */,
+				920C4C5B21A5553300E96133 /* MapViewController.swift */,
+				923A4FA021A77DE600189A2E /* CameraViewController.swift */,
 				921ECBF321A54D1C005C3302 /* Main.storyboard */,
 				921ECBF621A54D26005C3302 /* Assets.xcassets */,
 				921ECBF821A54D26005C3302 /* LaunchScreen.storyboard */,
 				921ECBFB21A54D26005C3302 /* Info.plist */,
-				920C4C5B21A5553300E96133 /* MapViewController.swift */,
 				92393DEA21A631AC0024A52C /* MoeGirlsGo-Bridging-Header.h */,
 			);
 			path = MoeGirlsGo;
@@ -179,6 +194,7 @@
 				921ECBF721A54D26005C3302 /* Assets.xcassets in Resources */,
 				92393DE921A6300F0024A52C /* AMap.bundle in Resources */,
 				921ECBF521A54D1C005C3302 /* Main.storyboard in Resources */,
+				9243FCD321ABD6E50045115B /* Scene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,8 +206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				921ECBF221A54D1C005C3302 /* ViewController.swift in Sources */,
+				923A4FA121A77DE600189A2E /* CameraViewController.swift in Sources */,
+				9243FCD521ABD8C50045115B /* Scene.swift in Sources */,
+				9266D34C21ACD0F4003EA3CF /* UIImage.swift in Sources */,
+				9243FCD721ABD8F90045115B /* AppDelegate.swift in Sources */,
 				920C4C5C21A5553300E96133 /* MapViewController.swift in Sources */,
-				921ECBF021A54D1C005C3302 /* AppDelegate.swift in Sources */,
+				9288F22521ACEE0100806435 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

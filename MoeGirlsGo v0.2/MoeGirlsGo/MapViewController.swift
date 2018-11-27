@@ -59,7 +59,7 @@ class MapViewController: UIViewController, MAMapViewDelegate {
     // 回调，标注样式
     func mapView(_ mapView: MAMapView!, viewFor annotation: MAAnnotation!) -> MAAnnotationView! {
         if annotation.coordinate.latitude == pMoeGirl.coordinate.latitude &&
-            annotation.coordinate.longitude == pMoeGirl.coordinate.longitude {
+        annotation.coordinate.longitude == pMoeGirl.coordinate.longitude {
             let pointReuseIndetifier = "pointReuseIndetifier"
             var annotationView: MAPinAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: pointReuseIndetifier) as! MAPinAnnotationView?
             if annotationView == nil {
@@ -68,7 +68,7 @@ class MapViewController: UIViewController, MAMapViewDelegate {
             annotationView!.animatesDrop = true
             annotationView!.isDraggable = false
             annotationView!.canShowCallout = true
-            annotationView!.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
+            //annotationView!.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
             annotationView!.pinColor = MAPinAnnotationColor(rawValue: 2)!
             return annotationView!
         }
@@ -79,11 +79,29 @@ class MapViewController: UIViewController, MAMapViewDelegate {
     func mapView(_ mapView: MAMapView!, didSelect view: MAAnnotationView!) {
         // 点击当前位置
         if view.annotation.coordinate.latitude == myLocation?.coordinate.latitude &&
-            view.annotation.coordinate.longitude == myLocation?.coordinate.longitude {
+        view.annotation.coordinate.longitude == myLocation?.coordinate.longitude {
+            print("Select my Location !")
             // 恢复旋转模式
             mapView.userTrackingMode = MAUserTrackingMode.followWithHeading
             myRep.showsHeadingIndicator = true
             mapView.update(myRep)
+        }
+    }
+    
+    // 每点击一个标注
+    func mapView(_ mapView: MAMapView!, didAnnotationViewTapped view: MAAnnotationView!) {
+        // 点击萌娘出现的位置
+        if let pTmp = view.annotation {
+            if pTmp.coordinate.latitude == pMoeGirl.coordinate.latitude &&
+            pTmp.coordinate.longitude == pMoeGirl.coordinate.longitude {
+                print("Tap Moe Girl !")
+                // 从地图移除该标注
+                mapView.removeAnnotation(pTmp)
+                // 加载摄像头视图
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let ARViewController = storyboard.instantiateViewController(withIdentifier: "CameraViewController")
+                present(ARViewController, animated: true, completion: nil)
+            }
         }
     }
 }
