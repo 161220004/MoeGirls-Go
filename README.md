@@ -46,7 +46,25 @@
   - 头像选择界面：改变当前所使用的头像
     - 在7种头像中选择一个，点击后，再点击右下的“返回图标”返回【角色界面】，则当前头像已经更改
 
-
+- 文件关系
+  - 开始界面相关
+    - PlayerRowCell.swift
+    - PlayerViewController.swift
+  - 主界面相关
+    - ViewController.swift
+  - 角色界面相关
+    - PlayerManagerViewController.swift
+  - 头像选择界面相关
+    - HeadersViewController.swift
+  - 地图界面相关
+    - Map
+  - AR界面相关
+    - AR
+  - 图鉴界面和详细信息界面相关
+    - Book
+    - MoeGirls
+  - 数据持久化存储相关
+    - Data
 
 
 
