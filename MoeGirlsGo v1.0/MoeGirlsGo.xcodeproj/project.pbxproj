@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180EE9F021E8AD4400EB20FE /* PlayerManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EE9EF21E8AD4400EB20FE /* PlayerManagerViewController.swift */; };
+		180EE9F221E8D72500EB20FE /* HeadersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EE9F121E8D72400EB20FE /* HeadersViewController.swift */; };
+		18790A9321E8633500F33C8B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18790A9221E8633500F33C8B /* Player.swift */; };
+		18790A9521E87EFE00F33C8B /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18790A9421E87EFD00F33C8B /* PlayerViewController.swift */; };
+		18790A9721E889FE00F33C8B /* PlayerRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18790A9621E889FE00F33C8B /* PlayerRowCell.swift */; };
 		920C4C5C21A5553300E96133 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C4C5B21A5553300E96133 /* MapViewController.swift */; };
 		921ECBF221A54D1C005C3302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921ECBF121A54D1C005C3302 /* ViewController.swift */; };
 		921ECBF521A54D1C005C3302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921ECBF321A54D1C005C3302 /* Main.storyboard */; };
@@ -44,6 +49,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180EE9EF21E8AD4400EB20FE /* PlayerManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManagerViewController.swift; sourceTree = "<group>"; };
+		180EE9F121E8D72400EB20FE /* HeadersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersViewController.swift; sourceTree = "<group>"; };
+		18790A9221E8633500F33C8B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		18790A9421E87EFD00F33C8B /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		18790A9621E889FE00F33C8B /* PlayerRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRowCell.swift; sourceTree = "<group>"; };
 		920C4C5B21A5553300E96133 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		921ECBEC21A54D1C005C3302 /* MoeGirlsGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoeGirlsGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		921ECBF121A54D1C005C3302 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +136,11 @@
 				9243FCD621ABD8F80045115B /* AppDelegate.swift */,
 				9288F22421ACEE0100806435 /* Global.swift */,
 				921ECBF121A54D1C005C3302 /* ViewController.swift */,
+				18790A9221E8633500F33C8B /* Player.swift */,
+				18790A9621E889FE00F33C8B /* PlayerRowCell.swift */,
+				18790A9421E87EFD00F33C8B /* PlayerViewController.swift */,
+				180EE9EF21E8AD4400EB20FE /* PlayerManagerViewController.swift */,
+				180EE9F121E8D72400EB20FE /* HeadersViewController.swift */,
 				921ECBFB21A54D26005C3302 /* Info.plist */,
 				92B4A6F821B4CA1C00A7797E /* Data */,
 				9244B0A721AD636700DC6F4E /* MoeGirls */,
@@ -267,11 +282,12 @@
 					921ECBEB21A54D1C005C3302 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 921ECBE721A54D1C005C3302 /* Build configuration list for PBXProject "MoeGirlsGo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -309,7 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180EE9F021E8AD4400EB20FE /* PlayerManagerViewController.swift in Sources */,
+				180EE9F221E8D72500EB20FE /* HeadersViewController.swift in Sources */,
 				927CD36821B8B08700B1F788 /* InformationHead.swift in Sources */,
+				18790A9721E889FE00F33C8B /* PlayerRowCell.swift in Sources */,
 				927CD36C21BAC0EE00B1F788 /* InformationViewController.swift in Sources */,
 				92450CF121B77DBC0009B147 /* MoeGirlProperty.swift in Sources */,
 				921ECBF221A54D1C005C3302 /* ViewController.swift in Sources */,
@@ -317,6 +336,7 @@
 				923A4FA121A77DE600189A2E /* CameraViewController.swift in Sources */,
 				9243FCD521ABD8C50045115B /* Scene.swift in Sources */,
 				9266D34C21ACD0F4003EA3CF /* UIImage.swift in Sources */,
+				18790A9321E8633500F33C8B /* Player.swift in Sources */,
 				9243FCD721ABD8F90045115B /* AppDelegate.swift in Sources */,
 				92EC80C321B511B3005BD5EB /* CoreDataManager.swift in Sources */,
 				920C4C5C21A5553300E96133 /* MapViewController.swift in Sources */,
@@ -325,6 +345,7 @@
 				92450CEB21B773DD0009B147 /* InformationCell.swift in Sources */,
 				9245403B21B6A59400856E47 /* MoeGirlInformation.swift in Sources */,
 				927CD36A21B9D3F900B1F788 /* MoeGirlPropInfo.swift in Sources */,
+				18790A9521E87EFE00F33C8B /* PlayerViewController.swift in Sources */,
 				92450CEF21B77B010009B147 /* MoeGirlDataManager.swift in Sources */,
 				9244B0A921AD63F200DC6F4E /* MoeGirlAnnotation.swift in Sources */,
 				925F7D5121B5CC4E0041A03D /* PlistManager.swift in Sources */,
@@ -481,10 +502,8 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MoeGirlsGo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = AldebaRain.MoeGirlsGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,10 +526,8 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MoeGirlsGo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = AldebaRain.MoeGirlsGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -33,7 +33,7 @@ class BookViewController: UIViewController {
     
     // 每转换类别
     @IBAction func segmentControlChanged(_ sender: UISegmentedControl) {
-        print(sender.titleForSegment(at: sender.selectedSegmentIndex)!)
+        print("查看图鉴：" + sender.titleForSegment(at: sender.selectedSegmentIndex)! + "类别")
         // 该类别全部萌娘
         groupGirlPropInfo.removeAll()
         groupGirlPropInfo.append(contentsOf: getGroupGirls(groupId: catalogSeg.selectedSegmentIndex))
@@ -133,7 +133,7 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     // 设定header和footer的方法，根据kind不同进行不同的判断即可
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "head", for: indexPath)  as! InformationHead
+        let headView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "head", for: indexPath)  as! InformationHead
         headView.headLabel.text = "萌娘类别\(catalogSeg.selectedSegmentIndex)的说明"
         return headView
     }

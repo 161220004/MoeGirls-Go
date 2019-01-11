@@ -39,7 +39,7 @@ class MapViewController: UIViewController, MAMapViewDelegate {
         mapView = MAMapView(frame: self.view.bounds)
         mapView.delegate = self
         self.view.addSubview(mapView)
-        self.view.sendSubviewToBack(mapView) // 置于底层
+        self.view.sendSubview(toBack: mapView) // 置于底层
         // 显示用户小蓝点
         mapView.showsUserLocation = true
         mapView.userTrackingMode = MAUserTrackingMode.followWithHeading
@@ -107,12 +107,14 @@ class MapViewController: UIViewController, MAMapViewDelegate {
     
     // 每刷新用户位置
     func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
-        myLocation = userLocation.location
-        // 获取选中的点到当前位置的距离
-        tmpDistance = MAMetersBetweenMapPoints(MAMapPointForCoordinate(myLocation!.coordinate),
-                                               MAMapPointForCoordinate(tmpCoordinate))
-        if tmpDistance < 1000000 {
-            distanceLabel.text = String(format: "距离：%.1f m", tmpDistance)
+        if let tmpLocation = userLocation.location {
+            myLocation = tmpLocation
+            // 获取选中的点到当前位置的距离
+            tmpDistance = MAMetersBetweenMapPoints(MAMapPointForCoordinate(myLocation.coordinate),
+                                                   MAMapPointForCoordinate(tmpCoordinate))
+            if tmpDistance < 1000000 {
+                distanceLabel.text = String(format: "距离：%.1f m", tmpDistance)
+            }
         }
     }
     
@@ -149,7 +151,7 @@ class MapViewController: UIViewController, MAMapViewDelegate {
                 annotationView!.isDraggable = false // 不可拖拽
                 // 显示按钮；点击按钮才会进入AR界面
                 annotationView!.canShowCallout = true
-                annotationView!.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
+                annotationView!.rightCalloutAccessoryView = UIButton(type: UIButtonType.detailDisclosure)
                 // 标注大头针颜色：0红，1绿，2紫
                 annotationView!.pinColor = MAPinAnnotationColor(rawValue: getGirlId(annotation: annotation) % 3)!
                 return annotationView!
@@ -172,7 +174,7 @@ class MapViewController: UIViewController, MAMapViewDelegate {
             // 点击萌娘出现的位置，自动计算距离
             tmpCoordinate.latitude = pTmp.coordinate.latitude
             tmpCoordinate.longitude = pTmp.coordinate.longitude
-            tmpDistance = MAMetersBetweenMapPoints(MAMapPointForCoordinate(myLocation!.coordinate),
+            tmpDistance = MAMetersBetweenMapPoints(MAMapPointForCoordinate(myLocation.coordinate),
                                                    MAMapPointForCoordinate(tmpCoordinate))
             distanceLabel.text = String(format: "距离：%.1f m", tmpDistance)
         }
@@ -217,7 +219,7 @@ class MapViewController: UIViewController, MAMapViewDelegate {
             }
             // 点击萌娘出现的位置
             if MAMetersBetweenMapPoints(MAMapPointForCoordinate(pTmp.coordinate),
-                                        MAMapPointForCoordinate(myLocation!.coordinate))
+                                        MAMapPointForCoordinate(myLocation.coordinate))
                 <= catchRange { // 在最小捕捉范围之内
                 // 获取当前萌娘类型
                 girlIdNow = getGirlId(annotation: pTmp)

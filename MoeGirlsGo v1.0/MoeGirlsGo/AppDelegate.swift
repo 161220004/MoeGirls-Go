@@ -15,8 +15,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 加载部分数据
+        
+        // 加载角色数据
+        print("Loading Players...")
+        CoreDataManager.shared.loadAllPlayers()
+        print("Load Players Success !")
+        
+        // 必须在主线程初始化CoreDataManager（因为使用UIApplication.delegate）
+        
+        // 并发加载部分数据
+        let loadQueue = DispatchQueue(label: "com.appcoda.myqueue")
+        loadQueue.async {
+            // 加载公式书
+            print("Loading Book...")
+            MoeGirlDataManager.shared.loadAllProperties()
+            printGirlProperties()
+            print("Load Book Success !")
+        }
+        
         return true
     }
 

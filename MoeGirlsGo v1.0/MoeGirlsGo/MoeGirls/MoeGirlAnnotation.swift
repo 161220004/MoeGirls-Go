@@ -37,8 +37,7 @@ class MoeGirlAnnotation: NSObject {
         // 随机生成经纬度
         let xBia = randomDouble(min: -nearRange, max: nearRange) // 随机x偏移
         let yBia = randomDouble(min: -nearRange, max: nearRange) // 随机y偏移
-        let myPoint = MAMapPointForCoordinate(myLocation?.coordinate
-            ?? CLLocationCoordinate2D(latitude: 0, longitude: 0)) // 当前坐标
+        let myPoint = MAMapPointForCoordinate(myLocation.coordinate) // 当前坐标
         coordinate = MACoordinateForMapPoint(
             MAMapPoint(x: (myPoint.x + xBia).truncatingRemainder(dividingBy: MAMapSizeWorld.width),
                        y: (myPoint.y + yBia).truncatingRemainder(dividingBy: MAMapSizeWorld.height)))

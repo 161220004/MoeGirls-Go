@@ -35,6 +35,12 @@ class InformationViewController: UIViewController {
     
     @IBOutlet weak var favorLabel: UILabel!
     
+    @IBOutlet weak var cheerImg: UIImageView!
+    
+    @IBOutlet weak var appearanceBtn: UIButton!
+    
+    @IBOutlet weak var albumBtn: UIButton!
+    
     @IBOutlet weak var storyBtn: UIButton!
     
     override func viewDidLoad() {
@@ -59,7 +65,8 @@ class InformationViewController: UIViewController {
         for i in 0...MAXFavorLevel {
             if girlPropInfoNow.favorLevel > i {
                 favorText += "♥️"
-            } else {
+            }
+            else {
                 favorText += "⭕️"
             }
         }
@@ -67,7 +74,8 @@ class InformationViewController: UIViewController {
         for i in stride(from: 0, to: 100, by: 10) {
             if girlPropInfoNow.favorExpPercent > i {
                 favorText += "◾️"
-            } else {
+            }
+            else {
                 favorText += "◽️"
             }
         }
@@ -75,6 +83,17 @@ class InformationViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy年MM月dd日相遇"
         encounterLabel.text = dateFormatter.string(from: girlPropInfoNow.encounterDate)
+        
+        // 如果是从AR跳转的，不显示按钮，且显示烟花；否则反之
+        if fromARView {
+            appearanceBtn.isHidden = true
+            albumBtn.isHidden = true
+            storyBtn.isHidden = true
+        }
+        else {
+            cheerImg.isHidden = true
+            self.view.sendSubview(toBack: cheerImg)
+        }
     }
     
     // 点击“返回”按钮

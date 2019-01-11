@@ -86,6 +86,10 @@ class CameraViewController: UIViewController, ARSKViewDelegate {
                 SearchBtn.setTitle("发现萌娘！请快速点击～", for: .normal)
             }
             else if countDownTime > 0 && tapNum >= MAXTapNum { // 结交成功
+                // 邂逅成就加一
+                totalEncounterNum += 1
+                CoreDataManager.shared.updateAchievement()
+                // 显示内容
                 finishCatch = true
                 TapNumTxt.text = "点击：\(MAXTapNum)/\(MAXTapNum)"
                 SearchBtn.setTitle("你和萌娘成为了好朋友<^_^>", for: .normal)

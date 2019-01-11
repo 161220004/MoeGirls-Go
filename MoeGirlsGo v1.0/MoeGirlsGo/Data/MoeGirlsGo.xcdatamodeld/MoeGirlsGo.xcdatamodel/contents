@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1618" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AchievementList" representedClassName="AchievementList" syncable="YES" codeGenerationType="class">
+        <attribute name="encounterNum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="playerNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="AnnoList" representedClassName="AnnoList" syncable="YES" codeGenerationType="class">
         <attribute name="annoId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="girlDescription" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,6 +11,7 @@
         <attribute name="girlLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="girlLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="girlName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="BookList" representedClassName="BookList" syncable="YES" codeGenerationType="class">
         <attribute name="encounterDate" optional="YES" attributeType="Date" defaultDateTimeInterval="565617660" usesScalarValueType="NO" syncable="YES"/>
@@ -14,9 +19,17 @@
         <attribute name="favorExpPercent" optional="YES" attributeType="Integer 32" minValueString="0" maxValueString="100" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="favorLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="girlId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="playerNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="PlayerList" representedClassName="PlayerList" syncable="YES" codeGenerationType="class">
+        <attribute name="head" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="no" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AnnoList" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="BookList" positionX="-63" positionY="27" width="128" height="120"/>
+        <element name="AnnoList" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="BookList" positionX="-63" positionY="27" width="128" height="135"/>
+        <element name="PlayerList" positionX="0" positionY="117" width="128" height="90"/>
+        <element name="AchievementList" positionX="-27" positionY="72" width="128" height="75"/>
     </elements>
 </model>

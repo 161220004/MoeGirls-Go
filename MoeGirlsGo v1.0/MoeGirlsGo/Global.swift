@@ -1,3 +1,4 @@
+
 //
 //  Global.swift
 //  MoeGirlsGo
@@ -22,9 +23,9 @@ let MAXCatchTime: Float = 20.0
 // 捕获所需点击数
 let MAXTapNum: Int = 50
 // 离镜头最近距离
-let MINDistanceFromCamera: Float = 1.0
+let MINDistanceFromCamera: Float = 0.3
 // 离镜头最远距离
-let MAXDistanceFromCamera: Float = 2.0
+let MAXDistanceFromCamera: Float = 0.7
 
 // 是否开始搜索萌娘
 var startToSearch: Bool = false
@@ -38,7 +39,7 @@ var countDownTime: Float = MAXCatchTime
 var tapNum: Int = 0
 
 // 用户当前位置
-var myLocation: CLLocation? = CLLocation(latitude: 0, longitude: 0)
+var myLocation: CLLocation = CLLocation(latitude: 0, longitude: 0)
 // 用户附近多少米可发现萌娘
 let nearRange: Double = 1000.0
 // 用户附近多少米可捕捉萌娘
@@ -54,6 +55,15 @@ var girlAnnotations: [Int: MoeGirlAnnotation] = [Int: MoeGirlAnnotation]()
 // 所有萌娘图鉴信息
 var girlBook: [Int: MoeGirlInformation] = [Int: MoeGirlInformation]()
 
+// 最多角色数
+let MAXPlayerNum: Int = 5
+// 当前玩家
+var currentPlayer: Player = Player()
+// 全部玩家信息
+var players: [Player] = [Player]()
+
+// 成就信息：邂逅次数
+var totalEncounterNum: Int = 0
 
 // 随机整数
 func randomInt(min: Int, max: Int) -> Int {
